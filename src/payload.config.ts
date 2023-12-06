@@ -20,7 +20,7 @@ export default buildConfig({
     user: 'users',
     bundler: webpackBundler(),
     meta: {
-      titleSuffix: '- DeigitalStore',
+      titleSuffix: '- DigitalStore',
       favicon: '/favicon.ico',
       ogImage: '/thumbnail.jpg',
     },
