@@ -89,7 +89,7 @@ const ImageSlider = ({ urls }: ImageSliderProps) => {
             <Image
               {...(index === 0 ? { priority: true } : {})}
               fill
-              sizes='(max-width: 768px) 50vw, 25vw'
+              sizes='(max-width: 768px) 100vw, 50vw'
               loading='eager'
               className='-z-10 h-full w-full object-cover object-center'
               src={url}
