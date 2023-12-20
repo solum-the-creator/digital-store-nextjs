@@ -7,6 +7,7 @@ import Cart from './Cart';
 import { getServerSideUser } from '@/lib/payload-utils';
 import { cookies } from 'next/headers';
 import UserAccountNav from './UserAccountNav';
+import MobileNav from './MobileNav';
 
 const Navbar = async () => {
   const nextCookies = cookies();
@@ -18,10 +19,10 @@ const Navbar = async () => {
         <MaxWidthWrapper>
           <div className='border-b border-gray-200'>
             <div className='flex h-16 items-center'>
-              {/* TODO: Mobile nav */}
+              <MobileNav />
 
               <div className='ml-4 flex lg:ml-0'>
-                <Link href={'/'}>
+                <Link href='/'>
                   <Icons.logo className='h-10 w-10' />
                 </Link>
               </div>
@@ -34,8 +35,10 @@ const Navbar = async () => {
                 <div className='hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6'>
                   {user ? null : (
                     <Link
-                      href={'/sign-in'}
-                      className={buttonVariants({ variant: 'ghost' })}
+                      href='/sign-in'
+                      className={buttonVariants({
+                        variant: 'ghost',
+                      })}
                     >
                       Sign in
                     </Link>
@@ -49,8 +52,10 @@ const Navbar = async () => {
                     <UserAccountNav user={user} />
                   ) : (
                     <Link
-                      href={'/sign-up'}
-                      className={buttonVariants({ variant: 'ghost' })}
+                      href='/sign-up'
+                      className={buttonVariants({
+                        variant: 'ghost',
+                      })}
                     >
                       Create account
                     </Link>
