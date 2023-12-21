@@ -12,6 +12,8 @@ import {
   render,
 } from '@react-email/components';
 
+import * as React from 'react';
+
 interface EmailTemplateProps {
   actionLabel: string;
   buttonText: string;
@@ -61,7 +63,7 @@ export const EmailTemplate = ({
   );
 };
 
-export const PrimaryActionEmail = (props: EmailTemplateProps) =>
+export const PrimaryActionEmailHtml = (props: EmailTemplateProps) =>
   render(<EmailTemplate {...props} />, { pretty: true });
 
 const main = {
